@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ishika Dutta — Software Engineer & AI/ML Researcher</title>
+<meta name="description" content="Ishika Dutta — Software Engineer, Full-Stack Developer, AI/ML Researcher & Tech Risk Enthusiast based in Kolkata, India.">
+<meta property="og:title" content="Ishika Dutta — Software Engineer & AI/ML Researcher">
+<meta property="og:description" content="Full-stack developer & IEEE-published AI/ML researcher. Currently Technology Risk @ EY India.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#ffffff">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Ishika Dutta",
+"jobTitle":"Software Engineer & AI/ML Researcher",
+"email":"mailto:dutta.ishika2005@gmail.com",
+"alumniOf":{"@type":"CollegeOrUniversity","name":"Institute of Engineering and Management, Kolkata"},
+"worksFor":{"@type":"Organization","name":"EY India"},
+"address":{"@type":"PostalAddress","addressLocality":"Kolkata","addressCountry":"IN"},
+"sameAs":["https://github.com/ISHUCODEZ","https://www.linkedin.com/in/ishika-dutta"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --ink:#17181c; --muted:#5f6470; --line:#ececf0;
+  --accent:#d4537e; --accent-dark:#b13a63; --accent-soft:#fdf0f4; --accent-mid:#f6d7e2;
+  --card:#ffffff; --soft:#f8f8fa;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+h1,h2,h3,h4,.sec-title,.logo,.stat b,.trow h4,.card h3{font-family:'Space Grotesk','Inter',sans-serif;}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),#e88aa9);z-index:2000;transition:width .1s linear;}
+::selection{background:var(--accent);color:#fff;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,4vw,40px);}
+section{padding:clamp(64px,10vh,110px) 0;}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:6px 14px;border-radius:999px;margin-bottom:18px;}
+.sec-title{font-size:clamp(30px,4.6vw,46px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:14px;}
+.sec-sub{color:var(--muted);max-width:560px;margin-bottom:44px;font-size:15.5px;}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+nav .wrap{display:flex;align-items:center;height:66px;gap:28px;}
+nav .logo{font-weight:800;font-size:17px;letter-spacing:-.01em;}
+nav .logo span{color:var(--accent);}
+nav .links{display:flex;gap:24px;font-size:14px;font-weight:500;color:var(--muted);flex:1;justify-content:center;}
+nav .links a:hover{color:var(--ink);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:14.5px;font-weight:600;padding:11px 22px;border-radius:12px;transition:.2s;border:1px solid transparent;}
+.btn.primary{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(212,83,126,.28);}
+.btn.primary:hover{background:var(--accent-dark);transform:translateY(-2px);}
+.btn.ghost{border-color:var(--line);color:var(--ink);background:#fff;}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+/* ---------- HERO ---------- */
+#hero{padding:150px 0 70px;position:relative;overflow:hidden;}
+#hero::before{content:"";position:absolute;top:-180px;right:-160px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,var(--accent-mid) 0%,rgba(253,240,244,0) 70%);pointer-events:none;
+  animation:float1 11s ease-in-out infinite;}
+#hero::after{content:"";position:absolute;bottom:-140px;left:-140px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,#efe6fb 0%,rgba(239,230,251,0) 70%);pointer-events:none;
+  animation:float2 14s ease-in-out infinite;}
+@keyframes float1{50%{transform:translate(-50px,45px) scale(1.12);}}
+@keyframes float2{50%{transform:translate(55px,-35px) scale(1.08);}}
+#hero h1 em::after{transform:scaleX(0);transform-origin:left;animation:hl 1s .6s ease forwards;}
+@keyframes hl{to{transform:scaleX(1);}}
+.badge .wave{display:inline-block;animation:wave 2.4s ease infinite;transform-origin:70% 70%;}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(14deg)}20%,40%{transform:rotate(-8deg)}}
+
+/* marquee */
+#marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:16px 0;background:var(--soft);}
+#marquee .track{display:flex;gap:44px;width:max-content;animation:mq 28s linear infinite;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;color:var(--muted);white-space:nowrap;}
+#marquee:hover .track{animation-play-state:paused;}
+#marquee i{color:var(--accent);font-style:normal;margin-right:44px;}
+@keyframes mq{to{transform:translateX(-50%);}}
+
+/* staggered reveals */
+.cards .card:nth-child(2),.mini .minicard:nth-child(2),.skillgrid .skillbox:nth-child(2),.stats .stat:nth-child(2){transition-delay:.08s;}
+.cards .card:nth-child(3),.mini .minicard:nth-child(3),.skillgrid .skillbox:nth-child(3),.stats .stat:nth-child(3){transition-delay:.16s;}
+.cards .card:nth-child(4),.mini .minicard:nth-child(4),.skillgrid .skillbox:nth-child(4),.stats .stat:nth-child(4){transition-delay:.24s;}
+.cards .card:nth-child(5),.mini .minicard:nth-child(5),.skillgrid .skillbox:nth-child(5){transition-delay:.32s;}
+.mini .minicard:nth-child(6){transition-delay:.4s;}
+@media (prefers-reduced-motion:reduce){#hero::before,#hero::after,#marquee .track,.badge .wave{animation:none;}}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#25784a;background:#e9f7ef;padding:7px 14px;border-radius:999px;margin-bottom:22px;}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:#34a96b;animation:pulse 2s infinite;}
+@keyframes pulse{50%{opacity:.35;}}
+#hero h1{font-size:clamp(40px,6.5vw,68px);font-weight:800;letter-spacing:-.03em;line-height:1.05;max-width:800px;}
+#hero h1 em{font-style:normal;color:var(--accent);position:relative;}
+#hero h1 em::after{content:"";position:absolute;left:0;bottom:6px;width:100%;height:10px;background:var(--accent-mid);z-index:-1;border-radius:3px;}
+#hero .lead{font-size:clamp(16px,1.8vw,19px);color:var(--muted);max-width:620px;margin:22px 0 32px;}
+#hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;}
+.stat{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:18px 20px;}
+.stat b{display:block;font-size:24px;font-weight:800;letter-spacing:-.02em;}
+.stat span{font-size:13px;color:var(--muted);}
+.stat b i{font-style:normal;color:var(--accent);}
+
+/* ---------- CARDS ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:14px;transition:.25s;position:relative;}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(23,24,28,.09);border-color:var(--accent-mid);}
+.card .ico{width:46px;height:46px;border-radius:13px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;}
+.card .ico svg{width:23px;height:23px;}
+.card h3{font-size:18.5px;font-weight:700;letter-spacing:-.01em;}
+.card .metric{font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:3px 10px;border-radius:999px;display:inline-block;width:fit-content;}
+.card p{font-size:14.5px;color:var(--muted);flex:1;}
+.tags{display:flex;flex-wrap:wrap;gap:7px;}
+.tag{font-size:12px;font-weight:500;color:var(--muted);background:var(--soft);border:1px solid var(--line);padding:4px 10px;border-radius:999px;}
+.card .foot{display:flex;gap:16px;align-items:center;font-size:14px;font-weight:600;margin-top:4px;}
+.card .foot a{color:var(--accent);display:inline-flex;align-items:center;gap:5px;}
+.card .foot a:hover{color:var(--accent-dark);text-decoration:underline;}
+.card .foot a.dim{color:var(--muted);}
+.featured-flag{position:absolute;top:20px;right:20px;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:999px;}
+
+.mini{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:22px;}
+.minicard{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;align-items:center;gap:12px;transition:.2s;font-size:14.5px;font-weight:600;}
+.minicard:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px);background:#fff;}
+.minicard svg{width:18px;height:18px;flex:none;color:var(--accent);}
+.minicard span{font-size:12px;color:var(--muted);font-weight:500;display:block;}
+
+/* ---------- EXPERIENCE ---------- */
+.timeline{position:relative;border-left:2px solid var(--accent-mid);margin-left:8px;}
+.trow{position:relative;padding:0 0 34px 30px;}
+.trow::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--accent);}
+.trow .date{font-size:13px;font-weight:600;color:var(--accent);}
+.trow .date .now{background:#e9f7ef;color:#25784a;padding:2px 10px;border-radius:999px;margin-left:8px;font-size:12px;}
+.trow h4{font-size:17.5px;font-weight:700;margin:4px 0 2px;}
+.trow .org{font-size:14px;color:var(--muted);font-weight:500;margin-bottom:6px;}
+.trow p{font-size:14.5px;color:var(--muted);max-width:640px;}
+
+/* ---------- SKILLS / RESEARCH ---------- */
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;}
+.skillbox{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:22px;}
+.skillbox h4{font-size:15px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.skillbox h4 svg{width:18px;height:18px;color:var(--accent);}
+.rescard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 14px 14px 0;padding:18px 22px;margin-bottom:14px;transition:.2s;}
+.rescard:hover{box-shadow:0 10px 26px rgba(23,24,28,.07);}
+.rescard b{font-size:15.5px;font-weight:700;display:block;margin-bottom:3px;}
+.rescard span{font-size:13.5px;color:var(--muted);}
+
+/* ---------- CASE ---------- */
+.case{display:none;padding-top:66px;}
+body.casemode #home{display:none;}
+body.casemode .case.active{display:block;}
+.case .head{padding:60px 0 34px;border-bottom:1px solid var(--line);}
+.case h1{font-size:clamp(30px,5vw,52px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:16px 0 20px;}
+.case .facts{display:flex;flex-wrap:wrap;gap:14px;}
+.case .facts div{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:10px 16px;font-size:13px;color:var(--muted);}
+.case .facts b{display:block;color:var(--ink);font-size:14px;font-weight:600;}
+.case .body{max-width:720px;padding:44px 0 20px;}
+.case .body h2{font-size:20px;font-weight:800;margin:34px 0 12px;display:flex;align-items:center;gap:10px;}
+.case .body h2::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);}
+.case .body h2:first-child{margin-top:0;}
+.case .body p{margin-bottom:14px;color:#3a3d46;font-size:15.5px;}
+.case .body ul{margin:0 0 14px 20px;color:#3a3d46;font-size:15.5px;}
+.case .body li{margin-bottom:8px;}
+.case .pull{background:var(--accent-soft);border:1px solid var(--accent-mid);border-radius:16px;padding:20px 24px;font-size:18px;font-weight:600;color:var(--accent-dark);margin:28px 0;line-height:1.5;}
+.case .cta{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0 50px;}
+.case .pn{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:28px 0 70px;font-weight:700;font-size:16px;}
+.case .pn span{display:block;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;}
+.case .pn a:hover{color:var(--accent);}
+.backlink{font-size:14px;font-weight:600;color:var(--muted);}
+.backlink:hover{color:var(--accent);}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--soft);border-top:1px solid var(--line);padding:80px 0 30px;text-align:center;}
+footer h2{font-size:clamp(28px,4.5vw,44px);font-weight:800;letter-spacing:-.02em;margin-bottom:14px;}
+footer .sub{color:var(--muted);max-width:480px;margin:0 auto 30px;}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;border-top:1px solid var(--line);margin-top:64px;padding-top:22px;font-size:13px;color:var(--muted);}
+footer .row a{font-weight:600;}
+footer .row a:hover{color:var(--accent);}
+.socials{display:flex;gap:20px;}
+
+@media (max-width:760px){
+  nav .links{display:none;}
+  #hero{padding-top:120px;}
+  .case .pn{flex-direction:column;gap:18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#/" onclick="goHome(event)">ishika<span>.dev</span></a>
+    <div class="links">
+      <a href="#work" onclick="goHome(event,'#work')">Work</a>
+      <a href="#experience" onclick="goHome(event,'#experience')">Experience</a>
+      <a href="#skills" onclick="goHome(event,'#skills')">Skills</a>
+      <a href="#research" onclick="goHome(event,'#research')">Research</a>
+      <a href="#contact" onclick="goHome(event,'#contact')">Contact</a>
+    </div>
+    <a class="btn primary" href="Ishika_Dutta_Resume.pdf" download>Resume</a>
+  </div>
+</nav>
+
+<main id="home">
+
+<header id="hero">
+  <div class="wrap">
+    <div class="badge reveal"><span class="dot"></span> Open to SDE, AI & Tech Risk / Security roles — 2026</div>
+    <h1 class="reveal">Hi, I'm Ishika. I build <em>AI products</em> that ship — and hold up under audit.</h1>
+    <p class="lead reveal">Software engineer, full-stack developer & IEEE-published AI/ML researcher from Kolkata. Currently in Technology Risk at EY India, working across ITGC, ITAC, SAP & SOC.</p>
+    <div class="cta reveal">
+      <a class="btn primary" href="#work">View my work</a>
+      <a class="btn ghost" href="mailto:dutta.ishika2005@gmail.com">Get in touch</a>
+      <a class="btn ghost" href="https://github.com/ISHUCODEZ" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><b><span class="count" data-to="9">0</span><i>+</i></b><span>internships incl. EY India</span></div>
+      <div class="stat reveal"><b><span class="count" data-to="3">0</span></b><span>research publications</span></div>
+      <div class="stat reveal"><b>Top <span class="count" data-to="10">0</span></b><span>global — Infosys Hackathon (650+ teams)</span></div>
+      <div class="stat reveal"><b><span class="count" data-to="8.5" data-dec="1">0</span></b><span>CGPA · B.Tech CSE, IEM Kolkata</span></div>
+    </div>
+  </div>
+</header>
+
+<div id="marquee" aria-hidden="true"><div class="track" id="mqtrack"></div></div>
+
+<section id="work">
+  <div class="wrap">
+    <span class="eyebrow reveal">Featured projects</span>
+    <h2 class="sec-title reveal">Selected Work</h2>
+    <p class="sec-sub reveal">Built end to end and published on GitHub — every project leads with a measured outcome, not a promise.</p>
+    <div class="cards" id="cardgrid"></div>
+    <div class="mini" id="minigrid"></div>
+  </div>
+</section>
+
+<section id="experience" style="background:var(--soft);">
+  <div class="wrap">
+    <span class="eyebrow reveal">Career</span>
+    <h2 class="sec-title reveal">Experience</h2>
+    <p class="sec-sub reveal">Nine roles across AI/ML research, full-stack engineering, cloud, and technology risk.</p>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <span class="eyebrow reveal">Toolbox</span>
+    <h2 class="sec-title reveal">Skills</h2>
+    <p class="sec-sub reveal">The stack I reach for, grouped by what I'm building.</p>
+    <div class="skillgrid" id="skillgrid"></div>
+  </div>
+</section>
+
+<section id="research" style="background:var(--soft);">
+  <div class="wrap">
+    <span class="eyebrow reveal">Publications & awards</span>
+    <h2 class="sec-title reveal">Research & Recognition</h2>
+    <p class="sec-sub reveal">IEEE-published work and the wins along the way.</p>
+    <div id="reslist"></div>
+  </div>
+</section>
+
+</main>
+
+<div id="cases" class="wrap"></div>
+
+<footer id="contact">
+  <div class="wrap">
+    <span class="eyebrow reveal">Contact</span>
+    <h2 class="reveal">Let's build something together.</h2>
+    <p class="sub reveal">Whether it's an AI product, a research collab, or a SWE role — my inbox is open.</p>
+    <a class="btn primary reveal" href="mailto:dutta.ishika2005@gmail.com">dutta.ishika2005@gmail.com</a>
+    <div class="row">
+      <span>© 2026 Ishika Dutta — designed & built by me</span>
+      <div class="socials">
+        <a href="https://github.com/ISHUCODEZ" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/ishika-dutta" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="Ishika_Dutta_Resume.pdf" download>Resume</a>
+      </div>
+      <span id="localtime">Kolkata — --:-- IST</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- icons ---------- */
+const IC={
+shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+chart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M21 20H3"/></svg>',
+bot:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="10" rx="2"/><path d="M12 4v4M9 13h.01M15 13h.01M8 4h8"/></svg>',
+book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19a2 2 0 012-2h13"/></svg>',
+sprout:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8M12 13c0-4 3-7 8-7 0 4-3 7-8 7zM12 13c0-3-2.5-5-6-5 0 3 2.5 5 6 5z"/></svg>',
+hand:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V7a1.5 1.5 0 013 0v4M10 10V5a1.5 1.5 0 013 0v5M13 10V6a1.5 1.5 0 013 0v6"/><path d="M16 12a1.5 1.5 0 013 0v3a7 7 0 01-7 7h-1c-3 0-5-1.5-6.5-4L3 14.5A1.6 1.6 0 015.5 13L7 15"/></svg>',
+cart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/><path d="M3 4h2l2.5 12h10L20 8H6"/></svg>',
+msg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-8 8H4l2-3a8 8 0 1115-5z"/><path d="M9 11h6"/></svg>',
+cpu:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="10" y="10" width="4" height="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>',
+code:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13 5l-2 14"/></svg>',
+cloud:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 01-.9-9.9A6 6 0 0118 8.5 4.5 4.5 0 0117.5 18z"/></svg>',
+brain:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 00-3 3 3 3 0 00-2 5 3 3 0 002 5 3 3 0 003 3c1 0 2-.5 3-2V6c-1-1.5-2-2-3-2zM15 4a3 3 0 013 3 3 3 0 012 5 3 3 0 01-2 5 3 3 0 01-3 3c-1 0-2-.5-3-2V6c1-1.5 2-2 3-2z"/></svg>',
+award:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L7 21l5-2.5L17 21l-2-7.5"/></svg>'};
+
+/* ---------- data ---------- */
+const GH='https://github.com/ISHUCODEZ';
+const CASES={
+itgc:{ico:'shield',title:'ITGC Controls Toolkit',metric:'4 audit engines · 5 frameworks',
+ desc:'Tests IT general controls the way an audit team does — SoD analysis, change auditing, access recertification & a control map across SOX, COBIT, ISO 27001, NIST CSF & SOC 2.',
+ tags:['Python','Flask','SQLite','RBAC'],repo:GH+'/itgc-toolkit',
+ role:'Solo design & build',time:'2026',stack:'Python · Flask · SQLite · Vanilla JS',
+ body:`<h2>Problem</h2>
+ <p>Most portfolio projects <i>describe</i> IT general controls; almost none actually test them. Audit teams work from messy exports — user-entitlement lists, change-ticket logs, access-review records — and every exception they raise must trace to a named rule with a risk rationale.</p>
+ <h2>Approach</h2>
+ <ul>
+  <li><b>SoD Analyzer</b> — flags toxic role combinations one person should never hold (create-vendor + approve-payment).</li>
+  <li><b>Change Auditor</b> — checks each change for approval, test evidence, and developer-vs-deployer segregation.</li>
+  <li><b>Recertification Tracker</b> — classifies access grants as current, due, overdue or never reviewed.</li>
+  <li><b>Framework Map</b> — crosswalks one control across SOX ITGC, COBIT 2019, ISO 27001:2022, NIST CSF 2.0 and SOC 2.</li>
+ </ul>
+ <h2>Decisions & trade-offs</h2>
+ <p>Rules over ML: an audit finding must be explainable and defensible, so every exception cites the exact rule it broke. The app also practises what it tests — server-side RBAC (admin / auditor / viewer) and a full activity audit trail.</p>
+ <h2>Outcome</h2>
+ <div class="pull">On sample data it surfaces 8 SoD conflicts, a 40% change-compliance rate and 6 of 10 at-risk access grants — with findings that cross-reference each other like a real audit.</div>`},
+equity:{ico:'chart',title:'Equity Technology Risk Lab',metric:'Stock prediction + risk analysis',
+ desc:'A stock-prediction dashboard with built-in risk analysis — the model-risk companion to the ITGC toolkit.',
+ tags:['Python','Prediction','Risk Analysis'],repo:GH+'/equity-technology-risk-lab',
+ role:'Solo design & build',time:'2026',stack:'Python · Stock Prediction · Risk Analysis',
+ body:`<h2>Problem</h2>
+ <p>Financial statements lean on automated controls <i>and</i> on models. The ITGC toolkit covers the first; this lab explores the second — how prediction models behave, where their assumptions bend, and how to present model risk so a non-quant stakeholder can act on it.</p>
+ <h2>Approach</h2>
+ <p>A stock-prediction dashboard with built-in risk analysis, designed to pair with the controls toolkit: where that project audits the IT environment around the numbers, this one interrogates the models producing them.</p>
+ <h2>Decisions & trade-offs</h2>
+ <p>Clarity over cleverness — visualisations are chosen so a reviewer can spot risk concentrations quickly, rather than maximising model sophistication.</p>
+ <h2>Outcome</h2>
+ <div class="pull">Together with the ITGC toolkit it forms a two-sided technology-risk portfolio: IT controls on one side, model risk on the other.</div>`},
+talent:{ico:'bot',title:'Talent Acquisition AI',metric:'−60% manual screening',
+ desc:'Multi-agent recruitment pipeline — resume screening, ranking & scheduling. Flask agents (Groq LLM + Exa) with a Next.js frontend and a Three.js 3D pipeline view.',
+ tags:['Python','Agentic AI','Next.js','Three.js'],repo:GH+'/generativeagenticai',
+ role:'Team lead — architecture & agents',time:'2025',stack:'Python · Flask · Groq · Exa · Next.js · Three.js',
+ body:`<h2>Problem</h2>
+ <p>Early-stage recruitment is repetitive: screening hundreds of resumes, ranking candidates against a rubric, scheduling interviews. Each step is judgment-light and volume-heavy — ideal for agents, if the pipeline stays transparent.</p>
+ <h2>Approach</h2>
+ <p>A Flask backend orchestrates specialised agents — chat, resume screening (Groq-hosted LLM with Exa web search), ranking and scheduling — exposed as REST endpoints. A Next.js frontend renders the pipeline as an interactive 3D visualisation in Three.js.</p>
+ <h2>Decisions & trade-offs</h2>
+ <p>Agent boundaries mirror recruiter tasks rather than model capabilities, keeping prompts small and logs auditable. Screening logs get their own endpoint — every automated decision leaves evidence.</p>
+ <h2>Outcome</h2>
+ <div class="pull">~60% reduction in manual screening effort in testing — and a pipeline whose every decision is logged and reviewable.</div>`},
+edtech:{ico:'book',title:'AI Education Platform',metric:'+35% course completion',
+ desc:'Personalised AI/ML learning paths for school students — assessment-driven pacing on React, Node, Supabase & PostgreSQL.',
+ tags:['React','Node.js','Supabase','PostgreSQL'],repo:GH+'/v0-ai-education-website',
+ role:'Full-stack build',time:'2025–26',stack:'React · Node.js · Supabase · PostgreSQL',
+ body:`<h2>Problem</h2>
+ <p>School students meet AI as a buzzword, not a skill. Generic courses ignore where a student actually is — pacing is one-size-fits-none.</p>
+ <h2>Approach</h2>
+ <p>A platform that assesses a student's level and generates a personalised AI/ML learning path, adjusting as they progress. React frontend, Node services, Supabase/PostgreSQL for auth, profiles and progress.</p>
+ <h2>Decisions & trade-offs</h2>
+ <p>Supabase over a custom backend for auth and realtime — trading some control for speed and reliability. Content modules built on the iQuester curriculum work that improved completion rates ~35%.</p>
+ <h2>Outcome</h2>
+ <div class="pull">A working platform where the curriculum adapts to the student — not the other way round.</div>`},
+geogrow:{ico:'sprout',title:'GeoGrow · KisanSure',metric:'Live on Vercel',
+ desc:'An AI guardian for farmers — crop-insurance guidance and agri-intelligence, deployed and publicly usable.',
+ tags:['TypeScript','React','Vercel'],repo:GH+'/GeoGrow',
+ role:'Full-stack build',time:'2025–26',stack:'TypeScript · React · Vite · Vercel',
+ body:`<h2>Problem</h2>
+ <p>Small farmers rarely have the information or confidence to claim crop insurance or act on agri-risk signals — the same accessibility gap FarmConnect tackled, seen from the insurance side.</p>
+ <h2>Approach</h2>
+ <p>KisanSure is an AI guardian for farmers: a TypeScript/React application that guides farmers through insurance decisions and agricultural risk, deployed on Vercel.</p>
+ <h2>Decisions & trade-offs</h2>
+ <p>Shipped as a live product rather than a demo — deployment, proxying and environment handling are part of the repo, not an afterthought.</p>
+ <h2>Outcome</h2>
+ <div class="pull">A deployed, working agri-AI product — try it live at geo-grow-mocha.vercel.app.</div>
+ <p><a href="https://geo-grow-mocha.vercel.app" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">Open the live app ↗</a></p>`}
+};
+const ORDER=['itgc','equity','talent','edtech','geogrow'];
+
+const MINI=[
+ ['FarmConnect — Infosys Hackathon','Voice · NLP · Twilio',GH+'/infosyss','sprout'],
+ ['AirCanvas','OpenCV · MediaPipe',GH+'/aircanvas2','hand'],
+ ['SaathiBazaar','Community marketplace',GH+'/SaathiBazaar','cart'],
+ ['Foul Comment Rectification','LLM · team repo','https://github.com/Mr-op1234/FCR','msg'],
+ ['AI Trading Simulator','WebSockets · team repo','https://github.com/bytedexter/trade_simulator','chart'],
+ ['Content-Based Recommender','ML · recommenders',GH+'/contentbasedrecommendationsystem','cpu']
+];
+
+const XP=[
+ ['May – Jul 2026',1,'Technology Risk Intern','EY India','ITGC, ITAC, SAP & SOC — IT general controls, application controls testing and SOC reporting for enterprise clients.'],
+ ['Dec 2025 – Mar 2026',0,'Software Engineering Intern','iQuester Solutions LLP','AI learning platform for 100+ students; −28% page load, +35% course completion via AI/ML curriculum modules.'],
+ ['Jul 2025 – ongoing',0,'Student Co-Lead, Research','IEM UEM Generative AI CoE','Led 8+ students on LLM fine-tuning & RAG; findings at 2 intl. conferences; −20% research turnaround.'],
+ ['Jun – Aug 2025',0,'SWE Intern, AI/ML Research','IEEE Pune Section','Co-authored IEEE ICDSINC 2025 paper; F1 0.87 on ICU event prediction.'],
+ ['May – Jul 2025',0,'Full-Stack SWE Intern','Generative AI CoE','AI trading simulator; WebSocket feeds cut data latency ~40%.'],
+ ['May – Jun 2025',0,'Full-Stack SWE Intern','Fluttr','6+ features across 2 sprints; MongoDB indexing → +25% API speed.'],
+ ['Sep – Oct 2024',0,'AWS Cloud Engineering Intern','NSIC Technical Services','3 cloud apps on EC2/S3/Lambda; IAM automation −50% manual steps.'],
+ ['Jun – Jul 2024',0,'Research Engineering Intern','mjunction services ltd','25+ page Odoo ERP evaluation adopted for vendor selection.'],
+ ['May – Jun 2024',0,'Project Intern','Nest Innovative Solutions','IoT RFID door lock; ~98% accuracy over 200+ test cycles.']
+];
+
+const SKILLS=[
+ ['code','Languages',['Python','Java','JavaScript','TypeScript','SQL']],
+ ['cpu','Full-Stack',['React','Next.js','Node.js','Flask','FastAPI','MongoDB','PostgreSQL']],
+ ['brain','AI / ML',['TensorFlow','PyTorch','LLM fine-tuning','RAG','LangChain','NLP','OpenCV']],
+ ['cloud','Cloud & DevOps',['AWS','Docker','Kubernetes','CI/CD','Supabase']],
+ ['shield','Tech Risk',['ITGC','ITAC','SAP','SOC','SOX · COBIT · ISO 27001']]
+];
+
+const RES=[
+ ['Federated Transformer-Based Learning for ICU Event Prediction with Multi-Hop XAI','IEEE ICDSINC · 2025 · F1 0.87'],
+ ['Hybrid Quantum-Classical Neural Network for Remote Sensing Image Classification','IRTM Conference · 2025'],
+ ['Astrophysics Research Paper','IEM Physics Intl. Conference · featured in IEM Magazine'],
+ ['State Winner & Top-10 Global Finalist — Infosys Global Hackathon 2025','Team leader · 650+ teams · Hyderabad finals'],
+ ['Best Session Paper Award','ICELTS International Conference'],
+ ['PR Lead, IEEE CS IEM Student Branch · Smart India Hackathon 2024','Leadership & community']
+];
+
+/* ---------- render ---------- */
+document.getElementById('cardgrid').innerHTML=ORDER.map(id=>{
+ const c=CASES[id];
+ return `<div class="card reveal">
+  <span class="featured-flag">★ FEATURED</span>
+  <div class="ico">${IC[c.ico]}</div>
+  <h3>${c.title}</h3>
+  <span class="metric">${c.metric}</span>
+  <p>${c.desc}</p>
+  <div class="tags">${c.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+  <div class="foot">
+   <a href="#/work/${id}">Case study →</a>
+   <a class="dim" href="${c.repo}" target="_blank" rel="noopener">GitHub ↗</a>
+  </div></div>`;}).join('');
+
+document.getElementById('minigrid').innerHTML=MINI.map(([t,k,u,ic])=>
+ `<a class="minicard reveal" href="${u}" target="_blank" rel="noopener">${IC[ic]}<div>${t}<span>${k}</span></div></a>`).join('');
+
+document.getElementById('timeline').innerHTML=XP.map(([d,now,r,o,w])=>
+ `<div class="trow reveal"><div class="date">${d}${now?'<span class="now">● Current</span>':''}</div>
+  <h4>${r}</h4><div class="org">${o}</div><p>${w}</p></div>`).join('');
+
+document.getElementById('skillgrid').innerHTML=SKILLS.map(([ic,h,items])=>
+ `<div class="skillbox reveal"><h4>${IC[ic]}${h}</h4>
+  <div class="tags">${items.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div>`).join('');
+
+document.getElementById('reslist').innerHTML=RES.map(([b,s])=>
+ `<div class="rescard reveal"><b>${b}</b><span>${s}</span></div>`).join('');
+
+/* ---------- case pages ---------- */
+const casesEl=document.getElementById('cases');
+ORDER.forEach((id,i)=>{
+ const c=CASES[id];
+ const pId=ORDER[(i-1+ORDER.length)%ORDER.length],nId=ORDER[(i+1)%ORDER.length];
+ const d=document.createElement('article');
+ d.className='case';d.id='case-'+id;
+ d.innerHTML=`
+  <div class="head">
+   <a class="backlink" href="#/" onclick="goHome(event,'#work')">← Back to all work</a>
+   <h1>${c.title}</h1>
+   <div class="facts">
+    <div>Role<b>${c.role}</b></div>
+    <div>Timeline<b>${c.time}</b></div>
+    <div>Stack<b>${c.stack}</b></div>
+   </div>
+  </div>
+  <div class="body">${c.body}
+   <div class="cta">
+    <a class="btn primary" href="${c.repo}" target="_blank" rel="noopener">View repository ↗</a>
+    <a class="btn ghost" href="mailto:dutta.ishika2005@gmail.com?subject=${encodeURIComponent(c.title)}">Ask me about it</a>
+   </div>
+  </div>
+  <div class="pn">
+   <a href="#/work/${pId}"><span>← Previous</span>${CASES[pId].title}</a>
+   <a href="#/work/${nId}" style="text-align:right"><span>Next →</span>${CASES[nId].title}</a>
+  </div>`;
+ casesEl.appendChild(d);
+});
+
+/* ---------- routing ---------- */
+function route(){
+ const m=location.hash.match(/^#\/work\/(\w+)/);
+ document.querySelectorAll('.case').forEach(c=>c.classList.remove('active'));
+ if(m&&CASES[m[1]]){
+  document.body.classList.add('casemode');
+  const el=document.getElementById('case-'+m[1]);
+  el.classList.add('active');
+  el.querySelectorAll('.reveal').forEach(r=>r.classList.add('in'));
+  window.scrollTo({top:0,behavior:'instant'});
+  document.title=CASES[m[1]].title+' — Ishika Dutta';
+ }else{
+  document.body.classList.remove('casemode');
+  document.title='Ishika Dutta — Software Engineer & AI/ML Researcher';
+ }
+}
+function goHome(e,target){
+ e.preventDefault();
+ history.pushState(null,'','#/');
+ route();
+ if(target){const t=document.querySelector(target);if(t)t.scrollIntoView({behavior:'smooth'});}
+ else window.scrollTo({top:0,behavior:'smooth'});
+}
+addEventListener('hashchange',route);
+route();
+
+/* ---------- reveal ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---------- time ---------- */
+function t(){
+ const now=new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'});
+ document.getElementById('localtime').textContent='Kolkata — '+now+' IST';
+}
+t();setInterval(t,30000);
+
+/* ---------- motion extras ---------- */
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const MQ=['Python','React','Next.js','Node.js','TensorFlow','PyTorch','LLM fine-tuning','RAG','LangChain','AWS','Docker','Kubernetes','PostgreSQL','Flask','ITGC','SAP','SOC'];
+const mqHtml=MQ.map(s=>`<span>${s} <i>✦</i></span>`).join('');
+document.getElementById('mqtrack').innerHTML=mqHtml+mqHtml;
+
+const bar=document.getElementById('progress');
+addEventListener('scroll',()=>{
+ const h=document.documentElement;
+ bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+},{passive:true});
+
+function runCount(el){
+ const to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0');
+ if(reduce){el.textContent=to.toFixed(dec);return;}
+ const start=performance.now(),dur=1400;
+ (function tick(now){
+  const p=Math.min(1,(now-start)/dur),e=1-Math.pow(1-p,3);
+  el.textContent=(to*e).toFixed(dec);
+  if(p<1)requestAnimationFrame(tick);
+ })(start);
+}
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+ if(e.isIntersecting){runCount(e.target);cio.unobserve(e.target);}
+}),{threshold:.5});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+
+if(!reduce&&matchMedia('(hover:hover)').matches){
+ document.querySelectorAll('.card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+   const r=card.getBoundingClientRect();
+   const rx=((e.clientY-r.top)/r.height-.5)*-6;
+   const ry=((e.clientX-r.left)/r.width-.5)*6;
+   card.style.transform=`translateY(-5px) perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+  });
+  card.addEventListener('mouseleave',()=>{card.style.transform='';});
+ });
+}
+</script>
+</body>
+</html>
