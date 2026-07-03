@@ -21,7 +21,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#ffffff; --ink:#17181c; --muted:#5f6470; --line:#ececf0;
@@ -266,13 +266,93 @@ nav .links a.active{color:var(--accent);}
   .reveal{filter:none;transform:none;transition:none;}
 }
 
+/* ============ FASHION LAYER — sticker & pastel editorial ============ */
+:root{--lav:#b9a3e3;--lav-soft:#efe8fc;--butter:#fff8bd;--ink2:#2a2230;}
+body{
+  background:#fff6f9;
+  background-image:linear-gradient(rgba(58,46,63,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(58,46,63,.05) 1px,transparent 1px);
+  background-size:34px 34px;
+}
+#heroTitle{font-family:'Archivo Black','Space Grotesk',sans-serif;font-weight:400;font-size:clamp(36px,5.8vw,62px);line-height:1.08;}
+.sec-title{font-family:'Archivo Black','Space Grotesk',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;}
+
+.btn{border:2px solid var(--ink2);border-radius:14px;box-shadow:4px 4px 0 var(--ink2);transition:.2s;}
+.btn:hover{box-shadow:6px 6px 0 var(--ink2);}
+.btn:active{box-shadow:1px 1px 0 var(--ink2);}
+.btn.primary:hover{background:var(--accent);}
+.eyebrow{border:2px solid var(--ink2);box-shadow:3px 3px 0 var(--ink2);background:var(--lav-soft);color:#6a4fb8;}
+.badge{border:2px solid var(--ink2);box-shadow:3px 3px 0 var(--ink2);}
+
+.stat{background:#fff;border:2px solid var(--ink2);border-radius:18px;box-shadow:5px 5px 0 var(--accent-mid);transition:.25s;}
+.stat:hover{transform:translate(-2px,-2px) rotate(-1deg);box-shadow:8px 8px 0 var(--accent-mid);}
+.stat:nth-child(2):hover{transform:translate(-2px,-2px) rotate(1deg);}
+
+.card{border:2px solid var(--ink2);border-radius:20px;box-shadow:7px 7px 0 var(--accent-mid);}
+.card:nth-child(even){box-shadow:7px 7px 0 var(--lav-soft);}
+.card:hover{border-color:var(--ink2);background:var(--card);box-shadow:11px 11px 0 var(--accent-mid);}
+.card:nth-child(even):hover{box-shadow:11px 11px 0 var(--lav);}
+.card .ico{border:2px solid var(--ink2);}
+.featured-flag{border:2px solid var(--ink2);background:var(--butter);color:#8a6a00;transform:rotate(3deg);}
+.minicard{border:2px solid var(--ink2);background:#fff;box-shadow:4px 4px 0 var(--accent-mid);border-radius:14px;}
+.minicard:hover{box-shadow:6px 6px 0 var(--accent);}
+.tag{border:1.5px solid rgba(42,34,48,.5);background:#fff;}
+
+.skillbox{background:var(--butter);border:2px solid var(--ink2);box-shadow:6px 6px 0 var(--lav);border-radius:4px 18px 18px 18px;}
+.skillbox:nth-child(odd){transform:rotate(-.8deg);}
+.skillbox:nth-child(even){transform:rotate(.8deg);background:var(--lav-soft);box-shadow:6px 6px 0 var(--accent-mid);}
+.skillbox:hover{transform:rotate(0) translateY(-4px);}
+.rescard{border:2px solid var(--ink2);border-left:8px solid var(--accent);border-radius:4px 16px 16px 4px;box-shadow:5px 5px 0 var(--lav-soft);}
+.rescard:hover{box-shadow:8px 8px 0 var(--lav);}
+.trow::before{border:2.5px solid var(--ink2);background:var(--accent-soft);}
+.timeline{border-left:2px solid var(--ink2);}
+
+nav{border-bottom:2px solid var(--ink2);background:rgba(255,246,249,.9);}
+#marquee{background:#ffe3ef;border-top:2px solid var(--ink2);border-bottom:2px solid var(--ink2);}
+#marquee .track{color:var(--ink2);}
+footer{background:linear-gradient(180deg,#fff6f9,var(--lav-soft));border-top:2px solid var(--ink2);}
+section#experience{background:var(--lav-soft)!important;}
+section#research{background:#ffeef5!important;}
+.case .facts div,.case .pull{border:2px solid var(--ink2);}
+.case .pull{box-shadow:6px 6px 0 var(--accent-mid);border-radius:16px;}
+
+.photo-frame{
+  border-radius:6px;border:2px solid var(--ink2);background:#fff;
+  padding:12px 12px 46px;transform:rotate(-3deg);aspect-ratio:auto;
+  box-shadow:9px 9px 0 var(--accent-mid);width:min(300px,85%);
+}
+.photo-frame img{aspect-ratio:4/5;border-radius:3px;border:1.5px solid rgba(42,34,48,.25);}
+.photo-frame::before{
+  content:"";position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(-4deg);
+  width:110px;height:30px;background:rgba(255,143,184,.65);border:1.5px solid rgba(42,34,48,.35);z-index:2;
+}
+.photo-frame::after{
+  content:"ishika ✿ 2026";border:none;position:absolute;bottom:12px;left:0;right:0;
+  text-align:center;font-family:'Space Grotesk';font-weight:600;font-size:14px;color:var(--ink2);border-radius:0;
+}
+
+.stk{position:absolute;pointer-events:none;font-size:40px;line-height:1;z-index:1;
+  -webkit-text-stroke:1.5px var(--ink2);animation:stkf 5.5s ease-in-out infinite;}
+@keyframes stkf{50%{transform:translateY(-12px) rotate(9deg);}}
+.stk.s1{top:100px;right:5%;color:var(--lav);font-size:52px;}
+.stk.s2{bottom:130px;left:3.5%;color:#ff8fb8;animation-delay:-2s;}
+.stk.s3{top:44%;right:38%;color:#ffd76e;font-size:26px;animation-delay:-1s;}
+.stk.s4{top:170px;left:42%;color:#ff8fb8;font-size:24px;animation-delay:-3.5s;}
+.zig{position:absolute;pointer-events:none;z-index:1;}
+.flowers{display:flex;justify-content:center;gap:26px;font-size:30px;margin:44px 0 0;color:#ff8fb8;-webkit-text-stroke:1.2px var(--ink2);}
+.flowers span{animation:stkf 4.5s ease-in-out infinite;}
+.flowers span:nth-child(2n){animation-delay:-1.4s;color:var(--lav);}
+.flowers span:nth-child(3n){animation-delay:-2.6s;color:#ffd76e;}
+
+@media (prefers-reduced-motion:reduce){.stk,.flowers span{animation:none;}}
 @media (max-width:760px){
   nav .links{display:none;}
   #hero{padding-top:110px;}
   .case .pn{flex-direction:column;gap:18px;}
   .hero-grid{grid-template-columns:1fr;gap:26px;}
   .hero-photo{order:-1;}
-  .photo-frame{width:190px;border-radius:20px;}
+  .photo-frame{width:200px;padding:8px 8px 36px;}
+  .stk{font-size:28px;}
+  .stk.s1{font-size:34px;}
 }
 </style>
 </head>
@@ -299,6 +379,10 @@ nav .links a.active{color:var(--accent);}
 <main id="home">
 
 <header id="hero">
+  <span class="stk s1" aria-hidden="true">✦</span>
+  <span class="stk s2" aria-hidden="true">✿</span>
+  <span class="stk s3" aria-hidden="true">♥</span>
+  <span class="stk s4" aria-hidden="true">✦</span>
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-text">
@@ -375,6 +459,7 @@ nav .links a.active{color:var(--accent);}
     <h2 class="reveal">Let's build something together.</h2>
     <p class="sub reveal">Whether it's an AI product, a research collab, or a SWE role — my inbox is open.</p>
     <a class="btn primary reveal" href="mailto:dutta.ishika2005@gmail.com">dutta.ishika2005@gmail.com</a>
+    <div class="flowers" aria-hidden="true"><span>✿</span><span>✿</span><span>✿</span><span>✿</span><span>✿</span><span>✿</span></div>
     <div class="row">
       <span>© 2026 Ishika Dutta — designed & built by me</span>
       <div class="socials">
