@@ -273,7 +273,24 @@ body{
   background-image:linear-gradient(rgba(58,46,63,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(58,46,63,.05) 1px,transparent 1px);
   background-size:34px 34px;
 }
-#heroTitle{font-family:'Archivo Black','Space Grotesk',sans-serif;font-weight:400;font-size:clamp(36px,5.8vw,62px);line-height:1.08;}
+.hero-top{display:flex;justify-content:space-between;gap:14px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--ink2);}
+.hero-display{position:relative;margin:14px 0 30px;padding-bottom:clamp(70px,10vw,130px);}
+#hero.nopic .hero-display{padding-bottom:0;}
+#hero.nopic .hero-cut{display:none;}
+#bigName{
+  font-family:'Archivo Black','Space Grotesk',sans-serif;font-weight:400;
+  font-size:clamp(46px,11.6vw,168px);line-height:.94;letter-spacing:-.015em;
+  color:var(--accent);text-transform:uppercase;text-align:center;white-space:nowrap;
+  text-shadow:5px 5px 0 var(--accent-mid);
+}
+.hero-cut{position:absolute;left:50%;bottom:-20px;transform:translateX(-50%);width:clamp(150px,19vw,245px);z-index:2;}
+.hero-cut img{
+  width:100%;aspect-ratio:4/5;object-fit:cover;display:block;
+  border:2px solid var(--ink2);border-radius:10px;box-shadow:9px 9px 0 var(--lav,#b9a3e3);
+}
+.hero-sub{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,16vw,240px);align-items:start;margin-bottom:30px;}
+.hs-tag{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(18px,2.1vw,25px);line-height:1.45;text-align:right;}
+.rosy{color:var(--accent-dark);background:var(--accent-mid);padding:1px 8px;border-radius:8px;font-style:normal;white-space:nowrap;box-shadow:2px 2px 0 rgba(42,34,48,.25);}
 .sec-title{font-family:'Archivo Black','Space Grotesk',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;}
 
 .btn{border:2px solid var(--ink2);border-radius:14px;box-shadow:4px 4px 0 var(--ink2);transition:.2s;}
@@ -348,9 +365,11 @@ section#research{background:#ffeef5!important;}
   nav .links{display:none;}
   #hero{padding-top:110px;}
   .case .pn{flex-direction:column;gap:18px;}
-  .hero-grid{grid-template-columns:1fr;gap:26px;}
-  .hero-photo{order:-1;}
-  .photo-frame{width:200px;padding:8px 8px 36px;}
+  .hero-top{font-size:9px;letter-spacing:.14em;}
+  .hero-sub{grid-template-columns:1fr;gap:18px;}
+  .hs-tag{text-align:left;}
+  #bigName{font-size:13.5vw;text-shadow:3px 3px 0 var(--accent-mid);}
+  .hero-cut{width:38vw;bottom:-12px;}
   .stk{font-size:28px;}
   .stk.s1{font-size:34px;}
 }
@@ -384,22 +403,26 @@ section#research{background:#ffeef5!important;}
   <span class="stk s3" aria-hidden="true">♥</span>
   <span class="stk s4" aria-hidden="true">✦</span>
   <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-text">
+    <div class="hero-top reveal"><span>Creative portfolio — software engineer</span><span>2026</span><span>(01)</span></div>
+    <div class="hero-display">
+      <h1 id="bigName">ISHIKA&nbsp;DUTTA</h1>
+      <div class="hero-cut">
+        <img src="ishika.jpg" alt="Ishika Dutta" onerror="document.getElementById('hero').classList.add('nopic')">
+      </div>
+    </div>
+    <div class="hero-sub">
+      <div class="hs-left">
         <div class="badge reveal"><span class="dot"></span> Open to SDE, AI & Tech Risk / Security roles — 2026</div>
-        <h1 id="heroTitle">Hi, I'm Ishika. I craft <em>intelligent products</em> — full-stack, AI-driven & security-first.</h1>
         <p class="lead reveal">Software engineer, full-stack developer & IEEE-published AI/ML researcher from Kolkata. Currently in Technology Risk at EY India, working across ITGC, ITAC, SAP & SOC.</p>
-        <div class="cta reveal">
-          <a class="btn primary" href="#work">View my work</a>
-          <a class="btn ghost" href="mailto:dutta.ishika2005@gmail.com">Get in touch</a>
-          <a class="btn ghost" href="https://github.com/ISHUCODEZ" target="_blank" rel="noopener">GitHub</a>
-        </div>
       </div>
-      <div class="hero-photo reveal">
-        <div class="photo-frame">
-          <img src="ishika.jpg" alt="Ishika Dutta" onerror="this.closest('.hero-photo').style.display='none'">
-        </div>
+      <div class="hs-right reveal">
+        <p class="hs-tag">I craft <em class="rosy">intelligent products</em> — full-stack, AI-driven &amp; security-first.</p>
       </div>
+    </div>
+    <div class="cta reveal">
+      <a class="btn primary" href="#work">View my work</a>
+      <a class="btn ghost" href="mailto:dutta.ishika2005@gmail.com">Get in touch</a>
+      <a class="btn ghost" href="https://github.com/ISHUCODEZ" target="_blank" rel="noopener">GitHub</a>
     </div>
     <div class="stats">
       <div class="stat reveal"><b><span class="count" data-to="9">0</span><i>+</i></b><span>internships incl. EY India</span></div>
@@ -755,7 +778,7 @@ const hover=matchMedia('(hover:hover)').matches;
 /* hero word-by-word reveal */
 function startHero(){
  const h=document.getElementById('heroTitle');
- if(reduce)return;
+ if(!h||reduce)return;
  const parts=[];
  h.childNodes.forEach(n=>{
   if(n.nodeType===3){n.textContent.split(/\s+/).filter(Boolean).forEach(w=>parts.push({t:w,em:false}));}
